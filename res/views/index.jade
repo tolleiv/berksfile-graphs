@@ -1,0 +1,39 @@
+extends layout
+block script
+    script(type='text/javascript').
+
+block content
+    .container.idx
+        .row
+            .col-md-6.upload
+                h2 Visualize your Berkshelf dependency graph
+                form(role='form', action='/transform', method="post", enctype="multipart/form-data")
+                    .form-group
+                        .form-group
+                            label(for='lockfile') Upload your Berksfile.lock
+                            input#lockfile(type='file',name='lockfile', style='display: none;')
+                            .input-append
+                                input#cover.form-control(type='text')
+                                a.btn.btn-primary.btn-browse(onclick='$(\'input[id=lockfile]\').click();') Browse
+                                p.help-block
+                                    | The Graph information contained in the Berksfile.lock will be transformed into
+                                    | a D3 graph representation. The actual Berksfile.lock is not stored.
+                                button.btn.btn-default(type='submit') Render graph
+                small
+                    | The code can be found on
+                    a(href='http://github.com') &nbsp;Github&nbsp;
+                    | , a short introduction can be found in my
+                    a(href='http://blog.tolleiv.de') &nbsp;blog.&nbsp;
+                    | This small proof-of-concept was built based on
+                    a(href='http://nodejs.io') &nbsp;NodeJs&nbsp;
+                    | and
+                    a(href='http://expressjs.com') &nbsp;ExpressJs.&nbsp;
+                    | The Graphs are rendered with
+                    a(href='http://marvl.infotech.monash.edu/webcola/') &nbsp;cola.js&nbsp;
+                    | which builds on top of
+                    a(href='http://d3js.org/') &nbsp;D3.
+            .col-md-3
+                img.demo(src='/minigraph.png')
+
+
+

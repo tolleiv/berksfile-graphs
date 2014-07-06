@@ -1,0 +1,77 @@
+body {
+    padding: 50px;
+}
+
+div.element-form {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+div.element-form form {
+    margin-top: 20px;
+}
+
+div.callout {
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+}
+
+div.code-callout {
+    background-color: #f4f8fa;
+    border-color: #5bc0de;
+}
+
+div.code-callout code {
+    color: #238AA8;
+    background-color: #f4f8fa;
+}
+
+.list-header button {
+    margin-top: 20px;
+}
+
+.btn-off {
+    background-color: rgb(192, 192, 192);
+    color: rgb(51, 51, 51);
+}
+
+.node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+    cursor: move;
+}
+
+.link {
+    stroke: #999;
+    stroke-width: 3px;
+    stroke-opacity: 1;
+}
+
+.label {
+    fill: white;
+    font-family: Verdana;
+    font-size: 9px;
+    text-anchor: middle;
+    cursor: move;
+}
+
+.guideline {
+    stroke: orangered;
+    stroke-width: 4px;
+}
+
+.btn-browse {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.input-append { position: relative; }
+.demo {     position: absolute; top: 50px }
+
+@media (min-width: 768px) {
+    .container.idx {
+        max-width: 730px;
+    }
+}
