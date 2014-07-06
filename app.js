@@ -8,7 +8,7 @@ var s3upload = require('./lib/S3UploadStream.js');
 
 var AWS = require('aws-sdk');
 AWS.config.region = process.env.AWS_REGION || 'eu-west-1';
-var S3_BUCKET = process.env.S3_BUCKET || 'cookbook-graphs-dev'
+var S3_BUCKET = process.env.S3_BUCKET
 
 var app = express();
 app.set('views', path.join(__dirname, 'res', 'views'));
