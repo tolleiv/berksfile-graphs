@@ -10,9 +10,6 @@ var AWS = require('aws-sdk');
 AWS.config.region = process.env.AWS_REGION || 'eu-west-1';
 var S3_BUCKET = process.env.S3_BUCKET
 
-
-console.log(process.env)
-
 var app = express();
 app.set('views', path.join(__dirname, 'res', 'views'));
 app.set('view engine', 'jade');
